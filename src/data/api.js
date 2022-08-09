@@ -1,4 +1,4 @@
-const url = 'api/v1/greetings';
+const url = 'http://[::1]:3000/api/v1/greetings';
 
 const getData = async (url) => {
   try {

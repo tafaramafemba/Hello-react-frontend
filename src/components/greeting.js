@@ -15,6 +15,7 @@ const Greeting = () => {
 
   return (
     <div>
+      <p>Below are the messages:</p>
     {
       greeting ? (
         greeting.attributes.greeting
