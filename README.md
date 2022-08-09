@@ -1,70 +1,148 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
+# Hello React Rails Backend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An application that generates random greetings split into two repositories. One for the backend which is in Ruby on Rails, the other which is in React.
+## Built With
 
-## Available Scripts
+- Ruby on Rails
+- React
+## Additional Tools
 
-In the project directory, you can run:
+- rubocop
+- stylelint
+- Ruby Gems
+- npm
 
-### `npm start`
+## Versions
+- Ruby  ~3.1.2
+- PostgreSQL  ~12.9
+- Node.js  ~14.17.6
+- Yarn  ~1.22.17
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## `Getting Started`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To get a local copy of this project:
 
-### `npm test`
+Clone this repository or download the Zip folder:
+```
+$ git clone git@github.com:tafaramafemba/hello-react-rails-backend.git
+```
+Then:
+```
+$ cd hello-rails-backend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+$ gem install bundler
 
-### `npm run build`
+$ bundle install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To start App:
+```
+$ rails server
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To view on browser:
+```
+http://localhost:3000
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## `Database creation`
 
-### `npm run eject`
+Create a Postgres user:
+```
+$ su - postgres
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+After that access Postgres:
+```
+psql
+```
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Initialize the database:
+```
+$ bin/rails db:setup
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Migrate the database:
+```
+$ bin/rails db:create
+```
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## front-end instructions
+To get a local copy of this project:
 
-## Learn More
+Clone this repository or download the Zip folder:
+```
+$ git clone git@github.com:tafaramafemba/hello-react-rails-frontend.git
+```
+Then:
+```
+$ cd hello-rails-frontend
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+$ gem install bundler
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+$ bundle install
+```
 
-### Code Splitting
+To start App:
+```
+$ npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To view on browser:
+```
+http://localhost:3001
+```
 
-### Analyzing the Bundle Size
+### To track linter errors locally follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Track Ruby linter errors run:
+```
+$ rubocop
+```
+To auto-correct correctable Rubocop offenses run:
+```
+$ rubocop --auto-correct-all | rubocop -A
+```
 
-### Making a Progressive Web App
+Track ESlint linter errors run:
+```
+$ npx eslint .
+```
+To auto-correct correctable Eslint errors run:
+```
+$ npx eslint . --fix
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Track Stylelint linter errors run:
+```
+$  npx stylelint "**/*.{css,scss}"
+```
+To auto-correct correctable Eslint errors run:
+```
+$ npx stylelint "**/*.{css,scss}" --fix
+```
 
-### Advanced Configuration
+## `Authors`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+👤 **Tafara Mafemba**
 
-### Deployment
+- GitHub: [@tafaramafemba](https://github.com/tafaramafemba)
+- LinkedIn: [Tafara Mafemba](https://www.linkedin.com/in/tafara-mafemba)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🤝 Contributing
 
-### `npm run build` fails to minify
+Contributions, issues, and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to check the [issues page](https://github.com/tafaramafemba/hello-rails-backend/issues).
+Feel free to check the [issues page](https://github.com/tafaramafemba/hello-rails-frontend/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
